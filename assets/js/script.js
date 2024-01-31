@@ -3,3 +3,7 @@ $('.fa-bars').click(function(){
     $('.fa-bars').toggleClass("fa-xmark");
 })
 
+$(window).scroll(function(){
+    $('.navbar').removeClass("slider");
+    $('.fa-bars').removeClass("fa-xmark");
+})

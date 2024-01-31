@@ -1,0 +1,554 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;500;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
+    text-decoration: none;
+    outline: none;
+    border: none;
+}
+
+html{
+    scroll-behavior: smooth;
+    width: 100%;
+    height: 100vh;
+}
+
+:root{
+    --bg-primary-color: #D9072D;
+    --bg-second-color: #F2DDB6;
+    --primary-color: #f0f0f0;
+    --second-color: #B4B5BA;
+    --color-light: #C07AD0;
+    --color-dark: #8A6DF2; 
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+body{
+    min-width: 397px;
+    width: 100%;
+    height: 100vh;
+    background-color: #0b0b0b;
+}
+
+/* HEADER */
+.header{
+    background-color: #0b0b0b;
+    box-shadow: 0px 0px 5px black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; height: 5rem;
+    position: fixed;
+}
+
+.logo{
+    margin-left: 5rem;
+}
+.logo h1{
+    font-size: 2.5rem;
+    color: var(--primary-color);
+}
+.logo h1 span{
+    color: var(--bg-primary-color);
+}
+
+.navbar{
+    margin-right: 5rem;
+    display: flex;
+    align-items: center;
+}
+.navbar ul{
+    display: flex;
+    list-style: none;
+    margin-right: 1rem;
+}
+.navbar i{
+    font-size: 1.5rem;
+    color: var(--bg-primary-color);
+    margin-left: 1rem;
+    display: none;
+}
+.navbar ul li{
+    margin-left: 1rem;
+    border-bottom: 1px solid var(--bg-primary-color);
+    padding: .5rem;
+    cursor: pointer;
+}
+.navbar ul li a{
+    color: var(--bg-primary-color);
+}
+.navbar ul li.active{
+    background: var(--bg-primary-color);
+}
+.navbar ul li.active a{
+    color: var(--primary-color);
+}
+
+.navbar ul li:hover a{
+    color: var(--primary-color);
+    transition: .5s;
+}
+.navbar ul li:hover{
+    background-color: var(--bg-primary-color);
+    transition: .5s;
+}
+
+.container{
+    width: 100%;
+}
+
+/* BANNER APRESENTAÇÃO */
+.banner{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: 0px 1px 6px #3d3d3d;
+}
+.banner .apresentacao{
+    padding: 2rem;
+    margin-top: 5rem;
+}
+.banner .apresentacao h2{
+    font-size: 4.5rem;
+    font-weight: 300;
+    color: var(--primary-color);
+}
+.banner .apresentacao h3{
+    font-size: 2rem;
+    color: #D9072D;
+}
+.banner .apresentacao p{
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: var(--primary-color);
+}
+
+.banner .apresentacao .social{
+    margin: 1.5rem 0;
+    display: flex;
+    align-items: center;
+}
+.banner .apresentacao .social i{
+    font-size: 2.5rem;
+    margin-left: .7rem;
+    cursor: pointer;
+    transition: .5s;
+    color: var(--primary-color);
+}
+.btn{
+    background-color: #CE534E;
+    padding: .6rem 1rem;
+    border-radius: .4rem;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: .5s;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: black;
+    transition: .4s;
+}
+
+.banner .apresentacao-img img{
+    margin: 2.5rem;
+    width: 25rem;
+    position: relative;
+    bottom: -2.5rem;
+    z-index: -1;
+}
+
+/* SKILLS */
+.skills{
+    width: 70%;
+    margin: 2rem auto;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+.skills .language{
+    width: 30%;
+    margin: 2rem 0.1rem;
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    box-shadow: 5px 2px 3px #ce524e3f;
+}
+.skills .language h4{
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    margin-left: .5rem;
+}
+.skills .language span{
+    font-size: 1.2rem;
+    margin-right: 2rem;
+    color: #F2DDB6;
+    font-weight: 300;
+}
+
+/* SOBRE MIM */
+.about{
+    width: 70%;
+    margin: 4rem auto;
+}
+.about h2{
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: var(--primary-color)
+}
+.about h2 span{
+    color: var(--bg-primary-color);
+}
+.about-container{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+    gap: 2rem;
+}
+.about-img img{
+    width: 22rem;
+    border-radius: 1rem;
+    box-shadow: 5px 2px 3px #ce524e3f;
+}
+.about-text{
+    color: var(--primary-color);
+    font-weight: 300;
+    width: 25rem;
+}
+.formacao{
+    color: var(--primary-color);
+    font-weight: 300;
+    width: 25rem;
+}
+.about-text h3, .formacao h3{
+    text-transform: uppercase;
+    color: #CE534E;
+    margin: .5rem 0;
+}
+.formacao .formacao-content h4{
+    font-size: 1.2rem;
+}
+.formacao .formacao-content h5{
+    font-size: 1rem;
+    margin-bottom: .5rem;
+}
+
+/* PROJETOS */
+.projects{
+    width: 70%;
+    margin: 4rem auto;
+}
+.projects h2{
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: var(--primary-color)
+}
+
+.projects-content{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+    gap: 2rem;
+    width: 100%;
+}
+.projects-content .box h3{
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: #F2DDB6;
+    font-weight: 500;
+    margin: 0.5rem 0;
+}
+.projects-content .box p{
+    color: var(--primary-color);
+    font-weight: 300;
+    margin-bottom: .7rem;
+}
+.projects-content .box .tech{
+    margin: .5rem 0;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.btnTech{
+    padding: .1rem .5rem;
+    display: flex;
+    align-items: center;
+    margin: 0 .5rem .5rem 0;
+}
+.btnTech.js{
+    color: black;
+    background-color: #F7DF1E;
+}
+.btnTech.html{
+    color: #fff;
+    background-color: #ff6600;
+}
+.btnTech.css{
+    color: #fff;
+    background-color: #1572B6;
+}
+.btnTech.sql{
+    color: #fff;
+    background-color: #4479a1;
+}
+.btnTech.php{
+    color: #fff;
+    background-color: #4f5b93;
+}
+.projects-content .box .tech i{
+    font-size: 1.5rem;
+    margin-right: .5rem;
+    color: #CE534E;
+}
+.projects-content .box .link a{
+    margin-right: .5rem;
+    cursor: pointer;
+}
+.projects-content .box .link a i span{
+    margin-right: .5rem;
+}
+
+.projects-content .box img{
+    width: 30rem;
+}
+
+/* EXTRAS */
+.extras{
+    width: 70%;
+    margin: 4rem auto;
+}
+.extras h2{
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: var(--bg-primary-color)
+}
+.extras h3{
+    color: var(--primary-color);
+    font-weight: 500;
+    margin: 0.5rem 0 1rem 0;
+}
+
+.extras-content{
+    display: flex;
+    flex-wrap: wrap;
+}
+.extras-content .box-extra{
+    margin-right: 0.5rem ;
+}
+.extras-content .box-extra img{
+    width: 22rem;
+}
+
+/* FOOTER */
+.footer{
+    width: 100%;
+    background: #3d3d3d6f;
+    padding: 1rem;
+    text-align: center;
+    color: #B4B5BA;
+}
+
+/* RESPONSIVIDADE */
+@media screen and (max-width:1150px) {
+    .banner .apresentacao h2{
+        font-size: 4rem;
+    }
+    .banner .apresentacao h3{
+        font-size: 1.5rem;
+    }
+    .banner .apresentacao-img img{
+        width: 20rem;
+    }
+    .skills, .about, .projects, .extras{
+        width: 90%;
+    }
+    .projects-content .box img{
+        width: 30rem;
+    }
+}
+
+@media screen and (max-width: 997px) {
+    .banner .apresentacao h2{
+        font-size: 3rem;
+    }
+    .banner .apresentacao h3{
+        font-size: 1.3rem;
+    }
+    .banner .apresentacao p{
+        font-size: 1rem;
+    }
+    .banner .apresentacao-img img{
+        width: 15rem;
+    }
+    .banner .apresentacao .social i{
+        font-size: 2rem;
+    }
+    .btn{
+        padding: .6rem .5rem;
+        font-size: .8rem;
+    }
+}
+
+@media screen and (max-width: 797px){
+    .logo{
+        margin-left: 2rem;
+    }
+    .logo h1{
+        font-size: 2rem;
+    }
+    .navbar{
+        margin-right: 2rem;
+    }
+    .navbar ul li a{
+        font-size: .8rem;
+    }
+    .banner .apresentacao-img img{
+       display: none;
+    }
+    .banner .apresentacao h2{
+        font-size: 3.5rem;
+    }
+    .banner .apresentacao h3{
+        font-size: 1.5rem;
+    }
+    .banner .apresentacao p{
+        font-size: 1rem;
+    }
+    .about, .projects, .extras{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .about-container, .projects-content, .extras-content{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width:697px) {
+    .skills{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .skills .language{
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 557px){
+    .navbar ul li{
+        display: none;
+    }
+    .navbar i.fa-bars{
+        display: block;
+    }
+    .slider{
+        background-color: rgb(255, 255, 255);
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: auto;
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+    }
+    .slider i{
+        font-size: 2rem;
+        position: absolute;
+        top: 1.5rem;
+        right: 2rem;
+        display: block;
+    }
+    .slider ul{
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .slider ul li{
+        width: 20rem;
+        border-bottom: none;
+        display: block;
+    }
+    .slider ul li.active{
+        background-color: transparent;
+    }
+    .slider ul li.active a{
+        color: #0b0b0b;
+    }
+    .slider ul li a{
+        font-size: 1.5rem;
+    }
+    .skills .language{
+        width: 30rem;
+    }
+    .projects-content .box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .projects-content .box .tech{
+        justify-content: center;
+    }
+    .projects-content .box img{
+        width: 25rem;
+    }
+}
+
+@media screen and (max-width: 447px){
+    .about-container{
+        margin: 1rem;
+        text-align: center;
+    }
+    .about-container p{
+        font-size: .8rem;
+    }
+    .formacao .formacao-content h4{
+        font-size: 1rem;
+    }
+    .about-img img{
+        width: 19rem;
+    }
+    .projects-content .box img{
+        width: 22rem;
+    }
+    .projects-content .box p{
+        font-size: .8rem;
+    }
+    .extras-content .box-extra img{
+        width: 19rem;
+    }
+    .extras h3{
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 397px) {
+    body{
+        display: flex;
+        flex-direction: column;
+    }
+    .slider i{
+        margin-right: 0.5rem;
+    }
+}

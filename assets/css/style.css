@@ -64,6 +64,9 @@ body{
     display: flex;
     align-items: center;
 }
+.slider{
+    left: -100rem;
+}
 .navbar ul{
     display: flex;
     list-style: none;
@@ -462,18 +465,20 @@ body{
     .slider{
         background-color: rgb(255, 255, 255);
         position: absolute;
-        top: 0;
-        width: 100%;
-        height: auto;
+        top: 5rem;
+        left: 0;
+        height: 100vh;
         padding: 2rem;
         display: flex;
         justify-content: center;
         align-items: baseline;
+        transition: .7s;
+        text-align: center;
     }
     .slider i{
         font-size: 2rem;
         position: absolute;
-        top: 1.5rem;
+        top: -3.5rem;
         right: 2rem;
         display: block;
     }
